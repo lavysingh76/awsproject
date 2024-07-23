@@ -598,3 +598,22 @@ Follow
         # after it has been globally disabled with "a2disconf".
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
+
+/etc/apche2/apache.conf
+
+<Directory />
+        Options FollowSymLinks
+        AllowOverride None
+        Require all denied
+</Directory>
+
+<Directory /usr/share>
+        AllowOverride None
+        Require all granted
+</Directory>
+
+<Directory /var/www/mylogs/>
+        Options Indexes FollowSymLinks
+        AllowOverride all
+        Require all granted
+</Directory>
