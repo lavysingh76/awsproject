@@ -84,7 +84,7 @@ Use the Composer
 sudo composer install
 Once the installation is completed the change permission to files :
 
-sudo chown -R www-data.www-data /var/www/laravel
+sudo chown -R www-data:www-data /var/www/laravel
 sudo chmod -R 755 /var/www/laravel
 sudo chmod -R 777 /var/www/laravel/storage
 —–From here onwards we will show how to set it up for accessing the Laravel app using Apache——
