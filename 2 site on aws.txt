@@ -92,6 +92,7 @@ than copy above code dubara  and add new sites
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 now save file
+sudo chown :www-data ~/folder name
 now restart the server
 and check the listner
 to check the listner command
