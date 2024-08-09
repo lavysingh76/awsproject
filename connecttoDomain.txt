@@ -1,0 +1,15 @@
+allocate elastic ip open elastic ip
+Create click on the newly created IP and Action > Associate Elastic IP address
+connect ip with ec2 no enter peivate ip skipcopy elactic ip public address
+open route 53 click host zone click create hostzone
+put domain name and craete host zone
+now open host zone that crate click on create recode
+now craete a rocode enter recode and recode type = route traffic to ipv4 address
+in value enter elactic ip public address routin policy chose simple routing
+now add more subdomain if you want like www. anythink
+create recode than add subdomain alais button on chose endpoint chose region and select it 
+now open where you perchase your domain not open and copy value/Route traffic to type NS DNS and paste in your domain dns
+example
+log in to your GoDaddy account or any other domain registration service you have used and go to your DNS settings.
+Choose manage Name servers and paste 4 values of type NS in your hosted zone in AWS, to your DNS management records. 
+
