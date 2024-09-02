@@ -9,3 +9,29 @@
         }
     ]
 }
+
+
+public function qrcode($value, $event_id, $user_id){
+        $from = [255, 0, 0];
+        $to = [0, 0, 255];
+
+        $data = QrCode::size(1080)
+        ->format('png')
+        ->backgroundColor(255, 255, 255)
+        // ->merge('/public/logo.png', 0.20)
+        ->errorCorrection('H')
+        ->style('round') //round ,dot
+        ->eye('square') //circle, square
+        ->gradient($from[0], $from[1], $from[2], $to[0], $to[1], $to[2], 'diagonal')
+        ->margin(1)
+        ->generate(
+            $value
+        );
+        $path = "tickets/{$event_id}/{$user_id}" . uniqid() . ".png";
+        return $this->uploadOnAws($path, $data);
+    }
+
+    public function uploadOnAws($path, $data){
+        Storage::disk('s3')->put($path, $data);
+        return Storage::disk('s3')->url($path);
+    }
