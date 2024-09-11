@@ -599,6 +599,7 @@ Follow
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 
+{
 /etc/apche2/apache.conf
 
 <Directory />
@@ -616,7 +617,8 @@ Follow
         Options Indexes FollowSymLinks
         AllowOverride all
         Require all granted
-</Directory>
+</Directory> 
+} //this not nessasry not jaruri
 
 //change in out htaccess
 <IfModule mod_rewrite.c>
