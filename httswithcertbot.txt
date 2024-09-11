@@ -1,0 +1,15 @@
+create instance 
+open install apache2
+now install certbot and python3-certbot-apache
+sudo apt-get install certbot python3-certbot-apache
+now open 000-default.conf file 
+ubuntu@ip-172-31-14-25:/etc/apache2/sites-available$ sudo nano 000-default.conf
+now uncomment Servername and put your domin name
+like
+ServerName myfitclub.in
+
+now run command
+certbot --apache -d <domian name>
+certbot --apache -d myfitclub.in
+
+and fill other info like wmail yesy yes yes
