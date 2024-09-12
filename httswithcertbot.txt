@@ -8,8 +8,17 @@ now uncomment Servername and put your domin name
 like
 ServerName myfitclub.in
 
-now run command
-certbot --apache -d <domian name>
+{ use second one 
+
+now run command for single domain like fitclub.in
+certbot --apache -d <domian name> 
+
+             or
+
+if want another sub domain then like fitclub.in , www.fitclub.in multi
+sudo certbot --apache -d fitclub.in -d www.fitclub.in
+}
+
 certbot --apache -d myfitclub.in
 
-and fill other info like wmail yesy yes yes
+and fill other info like mail yes yes yes
