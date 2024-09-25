@@ -8,6 +8,10 @@ now uncomment Servername and put your domin name
 like
 ServerName myfitclub.in
 
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =myfitclub.in
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
 { use second one 
 
 now run command for single domain like fitclub.in
