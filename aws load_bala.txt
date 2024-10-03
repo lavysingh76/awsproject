@@ -1,0 +1,28 @@
+create inctense one than copy it
+
+for copy
+select excisting ec2 click action click image and templets than create image
+
+now image create go to amis check image status than create ec2 throw image
+
+now create target group select all ec3 and select include as pending bleow than click to crate
+
+mow create a load balancer 
+click load balancer now click on create Application Load Balancer
+
+creeate certificate fo9r domain 
+
+create certificiatae than varifie it for verifi click to certificate than create route 53 
+
+now create load balancer 
+
+now go to route 53 than create route than select record type a and alias on than endpoint clacic load balancer select resion and chose load balancer and create record 
+
+now if 500 > error 
+than check target groups have ec2 machine added or not
+
+now if 419 error 
+
+than go .env and session_drive=database
+php artisan session:table
+php artisan migrate
