@@ -641,3 +641,8 @@ Follow
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+
+
+//eh command jarrori
+sudo a2enmod rewrite
+
